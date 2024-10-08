@@ -5,9 +5,8 @@ services:
     image: api-rest-node
     build: .
     volumes:
-      - .:/usr/src/app
-      - ./src:/usr/src/app/src
-      - ./dist:/usr/src/app/dist
+       - .:/usr/src/app            
+       - /usr/src/app/node_modules   
     ports:
       - '3000:3000'
     stdin_open: true   
