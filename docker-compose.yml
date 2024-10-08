@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    image: api-rest-node
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - ./src:/usr/src/app/src
+      - ./dist:/usr/src/app/dist
+    ports:
+      - '3000:3000'
+    stdin_open: true   
+    tty: true           
